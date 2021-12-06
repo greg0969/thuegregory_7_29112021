@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Les petits plats</title>
+    <script src="https://kit.fontawesome.com/f7a1214a9b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/style.css" />
+  </head>
+
+  <body> 
+    <header class="header">
+      <a href="index.html" class="logoContainer">
+        <img src="public/images/logo/logo.png" alt="Logo les petits plats" id="logo" /><br>
+      </a>
+    </header>
+    <div class="input-group rounded search-bar">
+      <input type="search" class="form-control rounded" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" aria-label="Search"
+      aria-describedby="search-addon" /><i class="fas fa-search"></i>        
+    </div> 
+    <div class="currentTagList"><div class="filter-style">Coco</div></div>
+    <div class="select-group">
+      <!-- debut de la liste -->
+      <div class="selectBox">
+        <div class="selectedOption">
+          <input  id="ingredients" class="form-select" type="text" value="ingrédient" readonly="readonly" />
+          <i class="fas fa-chevron-down"></i>
+        </div>
+       
+        <div class="listeItem" >
+        </div>
+      </div>
+      
+      <!-- fin de la liste -->
+      <!-- debut de la liste -->
+      <div class="selectBox">
+        <div class="selectedOption">
+          <input  id="appareils" class="form-select" type="text" value="Appareils" readonly="readonly" />
+          <i class="fas fa-chevron-down"></i>
+        </div>
+       
+        <div class="listeItem">
+        </div>
+      </div>
+      <!-- fin de la liste -->
+      <!-- debut de la liste -->
+      <div class="selectBox">
+        <div class="selectedOption">
+          <input  id="ustensils" class="form-select" type="text" value="Ustensils" readonly="readonly" />
+          <i class="fas fa-chevron-down"></i>
+        </div>
+       
+        <div class="listeItem" >
+        </div>
+      </div>
+      <!-- fin de la liste -->
+       
+      <div id="test"></div>
+    </div>
+    <main id="main">
+     
+    </main>
+    <script src="js/selectBox.js"></script>
+    <script src="js/recipes.js"></script>
+  </body>
+</html>
+
+ 
+
+ 
+

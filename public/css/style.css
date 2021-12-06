@@ -1,0 +1,124 @@
+body {
+  font-family: DM Sans;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.logoContainer {
+  width: 20%;
+}
+
+#logo {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 1em auto;
+  height: 3.9em;
+}
+
+.fa-search {
+  position: absolute;
+  right: 2%;
+  top: 22%;
+  font-size: 32px;
+}
+
+.search-type {
+  float: left;
+  border: none;
+}
+
+.select-group {
+  height: auto;
+  border: none;
+  display: flex;
+}
+
+.form-select {
+  width: 85%;
+  height: 3.9em;
+  color: white;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  padding-left: 5%;
+  cursor: pointer;
+}
+
+.filter-style {
+    width: 9%;
+    height: 2em;
+    padding: 0.2em 0 0 1.5em ; 
+    margin-left: 63px; 
+    color: white;
+}
+
+.filter-style::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f057";
+    margin-left: 15%;
+    color: white;
+    cursor: pointer;
+}
+
+#ingredients {
+  background-color: #3282f7;
+}
+
+#appareils {
+  background-color: #68d9a4;
+}
+
+#ustensils {
+  background-color: #ed6454;
+}
+
+.fa-chevron-down {
+    margin-left: -15%;
+    color: white;
+    cursor: pointer;
+    height: fit-content; 
+}
+
+
+.selectBox {
+  float: left;
+  margin: 15px 63px;
+  padding: 2px;
+}
+
+.listeItem {
+  display: none;
+  position: absolute;
+  border: 1px solid #aaaaaa;
+  height: 100px;
+  overflow: auto;
+  background-color: #ffffff;
+  z-index: 20;
+}
+
+.item {
+  border: none;
+  /* text-align: center; */
+  cursor: default;
+  width: 100%;
+}
+
+.itemOver {
+  background-color: #dedeff;
+}
+
+.itemOut {
+}
+
+.fa-chevron-down {
+}
