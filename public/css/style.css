@@ -1,5 +1,5 @@
 body {
-  font-family: DM Sans;
+  font-family: "Lato";
 }
 
 .header {
@@ -82,7 +82,7 @@ body {
   background-color: #ed6454;
 }
 
-.fa-chevron-down {
+.fa-chevron-down,.fa-chevron-up {
     margin-left: -15%;
     color: white;
     cursor: pointer;
@@ -117,8 +117,56 @@ body {
   background-color: #dedeff;
 }
 
-.itemOut {
+
+  /* conteneur des recettes */
+
+.recipeList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.fa-chevron-down {
+.img {
+  height: 178px;
+  background-color: #C7BEBE;
+  border-radius: 5px 5px 0px 0px;
+}
+.recipeCard {
+  width: 30%;
+  background-color: #E7E7E7;
+  border-radius: 5px 5px 0px 0px;
+  height: 380px;
+}
+
+figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h1, .time {
+  width: 50%;
+  margin-bottom: 1em;
+}
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  font-weight: 700;
+  height: 105px;
+}
+
+.desc {
+  font-size: 12px;
+  width: 70%;
+}
+.desc {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 109px;
+  font-family: "Raboto";
 }

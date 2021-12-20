@@ -1,7 +1,4 @@
-
-
 let tempo = null, objTempo, dblClic = false;
-
 
 const selectBox = document.querySelectorAll(".selectBox");
 const inputGroup = document.querySelectorAll(".form-select");
@@ -13,10 +10,12 @@ for (let i = 0; i < inputGroup.length; i++) {
         const liste = document.querySelectorAll(".listeItem");
         if (liste[i].style.display == "" || liste[i].style.display == "none") {
             liste[i].style.display = "block";
+            selectGroup[i].setAttribute("class","fas fa-chevron-up");
         }
 
         else {
             liste[i].style.display = "none";
+            selectGroup[i].setAttribute("class","fas fa-chevron-down");
         }
 
     })
@@ -91,5 +90,10 @@ currentTag.forEach((tag) => {
         tag.style.display = "none";
     })
 })
+let ingredients = document.querySelector(".listeItemIngredients");
+let appareils = document.querySelector(".listeItemAppareils");
+let ustensils = document.querySelector(".listeItemUstensils");
 
-
+// ingredients.innerHTML += displayAppareils();
+// appareils.innerHTML += displayAppareils();
+// ustensils.innerHTML += displayustensils();
