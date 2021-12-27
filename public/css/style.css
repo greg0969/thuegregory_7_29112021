@@ -2,6 +2,8 @@ body {
   font-family: "Lato";
 }
 
+  /* HEADER */
+
 .header {
   display: flex;
   width: 100%;
@@ -16,11 +18,21 @@ body {
   margin-top: 1em;
   width: 100%;
 }
+  /* SEARCH SECTION */
+
+.search-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 99%;
+  margin-bottom: 2em;
+}
+
+  /* SEARCH BAR */
 
 .input-group {
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 89%;
   margin: 1em auto;
   height: 3.9em;
 }
@@ -36,11 +48,36 @@ body {
   float: left;
   border: none;
 }
+  /* CURRENT TAG */
+
+.currentTagList {
+  width: 89%;
+  margin: auto;
+}
+
+.filter-style {
+  width: 110px;
+  height: 2em;
+  padding: 0.2em 0 0 1.2em ; 
+  color: white;
+}
+
+.filter-style::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f057";
+  margin-left: 15%;
+  color: white;
+  cursor: pointer;
+}
+
+  /* SELECT BOX */
 
 .select-group {
   height: auto;
   border: none;
   display: flex;
+  margin: auto;
+  width: 89%;
 }
 
 .form-select {
@@ -54,21 +91,7 @@ body {
   cursor: pointer;
 }
 
-.filter-style {
-    width: 9%;
-    height: 2em;
-    padding: 0.2em 0 0 1.5em ; 
-    margin-left: 63px; 
-    color: white;
-}
 
-.filter-style::after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f057";
-    margin-left: 15%;
-    color: white;
-    cursor: pointer;
-}
 
 #ingredients {
   background-color: #3282f7;
@@ -92,7 +115,7 @@ body {
 
 .selectBox {
   float: left;
-  margin: 15px 63px;
+  margin: 15px 0;
   padding: 2px;
 }
 
@@ -118,11 +141,11 @@ body {
 }
 
 
-  /* conteneur des recettes */
+  /* CONTENEUR DES RECETTES */
 
 .recipeList {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -132,7 +155,7 @@ body {
   border-radius: 5px 5px 0px 0px;
 }
 .recipeCard {
-  width: 30%;
+  width: 26%;
   background-color: #E7E7E7;
   border-radius: 5px 5px 0px 0px;
   height: 380px;
@@ -152,17 +175,20 @@ h1, .time {
   width: 50%;
   margin-bottom: 1em;
 }
+.time {
+  text-align: center;
+}
 .ingredients {
   display: flex;
   flex-direction: column;
-  width: 22%;
+  width: 25%;
   font-weight: 700;
   height: 105px;
 }
 
 .desc {
   font-size: 12px;
-  width: 70%;
+  width: 75%;
 }
 .desc {
   text-overflow: ellipsis;

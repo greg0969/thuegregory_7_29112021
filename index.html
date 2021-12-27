@@ -18,49 +18,52 @@
         <img src="public/images/logo/logo.png" alt="Logo les petits plats" id="logo" /><br>
       </a>
     </header>
-    <div class="input-group rounded search-bar">
-      <input type="search" class="form-control rounded" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" aria-label="Search"
-      aria-describedby="search-addon" /><i class="fas fa-search"></i>        
-    </div> 
-    <div class="currentTagList"><div class="filter-style">Coco</div></div>
-    <div class="select-group">
-      <!-- debut de la liste -->
-      <div class="selectBox">
-        <div class="selectedOption">
-          <input  id="ingredients" class="form-select" type="text" value="ingrédient" readonly="readonly" />
-          <i class="fas fa-chevron-down"></i>
+    <div class="search-section">
+      <div class="input-group rounded search-bar">
+        <input type="search" class="form-control rounded" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" aria-label="Search"
+        aria-describedby="search-addon" /><i class="fas fa-search"></i>        
+      </div> 
+      <div class="currentTagList"><div class="filter-style">Coco</div></div>
+      <div class="select-group">
+        <!-- debut de la liste -->
+        <div class="selectBox">
+          <div class="selectedOption">
+            <input  id="ingredients" class="form-select" type="text" value="Ingrédients" readonly="readonly" />
+            <i class="fas fa-chevron-down"></i>
+          </div>
+         
+          <div class="listeItem listeItemIngredient" >
+          </div>
         </div>
-       
-        <div class="listeItem listeItemIngredient" >
+        
+        <!-- fin de la liste -->
+        <!-- debut de la liste -->
+        <div class="selectBox">
+          <div class="selectedOption">
+            <input  id="appareils" class="form-select" type="text" value="Appareils" readonly="readonly" />
+            <i class="fas fa-chevron-down"></i>
+          </div>
+         
+          <div class="listeItem listeItemAppareils">
+          </div>
         </div>
+        <!-- fin de la liste -->
+        <!-- debut de la liste -->
+        <div class="selectBox">
+          <div class="selectedOption">
+            <input  id="ustensils" class="form-select" type="text" value="Ustensils" readonly="readonly" />
+            <i class="fas fa-chevron-down"></i>
+          </div>
+         
+          <div class="listeItem listeItemUstensils" >
+          </div>
+        </div>
+        <!-- fin de la liste -->
+         
+        <div id="test"></div>
       </div>
-      
-      <!-- fin de la liste -->
-      <!-- debut de la liste -->
-      <div class="selectBox">
-        <div class="selectedOption">
-          <input  id="appareils" class="form-select" type="text" value="Appareils" readonly="readonly" />
-          <i class="fas fa-chevron-down"></i>
-        </div>
-       
-        <div class="listeItem listeItemAppareils">
-        </div>
-      </div>
-      <!-- fin de la liste -->
-      <!-- debut de la liste -->
-      <div class="selectBox">
-        <div class="selectedOption">
-          <input  id="ustensils" class="form-select" type="text" value="Ustensils" readonly="readonly" />
-          <i class="fas fa-chevron-down"></i>
-        </div>
-       
-        <div class="listeItem listeItemUstensils" >
-        </div>
-      </div>
-      <!-- fin de la liste -->
-       
-      <div id="test"></div>
     </div>
+    
     <main id="main">
       <div class="recipeList"> 
         
@@ -68,6 +71,7 @@
     </main>
     <script src="js/recipes.js"></script>
     <script src="js/Recipe.js"></script>
+    <script src="js/displayRecipe.js"></script>
     <script src="js/searchBar.js"></script>
     <script src="js/selectBox.js"></script>
     

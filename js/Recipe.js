@@ -9,26 +9,19 @@ class Recipe {
     this.appliance = recipe.appliance;
     this.ustensils = recipe.ustensils;
   }
-  displayRecipes() {
+  recipeCard() {
     return `
-      <figure>
-          <div class="img"></div>>
-          <figcaption>
-            ${this.id}
-          </figcaption>
-        </figure>
+    <figure class="recipeCard">
+    <div class="img"></div>
+    <figcaption>
+        <h1>${this.name}</h1> <div class="time"><i class="far fa-clock"></i> ${this.time} min</div>    
+        <div class="ingredients"></div>
+        <div class="desc">${this.description}</div>
+    </figcaption>
+    </figure>
         `;
   }
-  displayRelevantRecipe() {
-    return `
-      <figure>
-          <div class="img"></div>>
-          <figcaption>
-            ${this.id}
-          </figcaption>
-        </figure>
-        `;
-  }
+  
   displayIngredient() {
     return `
     <div>

@@ -1,43 +1,50 @@
-// const displayRecipes = (recipes) => {
-//     //console.log(recipeArray)
-
-//     for (let i = 0; i < recipes.length; i++) {
-//         index = i
-//     }
-
-//     const recipesContainer = document.querySelector(".recipeList");
-//     relevantRecipe = new Recipe();
-//     console.log(relevantRecipe)
-//     recipesContainer.innerHTML += relevantRecipe.displayRelevantRecipe();
-
-// };
-
-
-
-
-// const init = async () => {
-//    // const data = await getData();
-//     displayRecipes(recipes) ;
-//   };
-//   init();
-
-recipes.forEach((recipe) => {
+let searchBar = document.querySelector(".form-control");
+searchBar.addEventListener("change", () => {
     const recipeContainer = document.querySelector(".recipeList");
-    let ingredients = recipe.ingredients;
-    for (let i = 0; i < ingredients.length; i++) {
-        console.log(ingredients[i])
-        recipeContainer.innerHTML +=
-        `
-        <figure class="recipeCard">
-            <div class="img"></div>
-            <figcaption>
-                <h1>${recipe.name}</h1> <div class="time"><i class="far fa-clock"></i> ${recipe.time} min</div>    
-                <div class="ingredients">${ingredients[i]}</div>
-                <div class="desc">${recipe.description}</div>
-            </figcaption>
-        </figure>
-      `
+    searchBarValue = searchBar.value ;
+    
+
+    if (searchBarValue.length < 3) {
+        console.log("Veuillez entrer au minimum 3 caractères")
     }
 
-
+    if (searchBarValue.length >= 3) {
+        const search = searchRecipe(recipes);
+        recipeContainer.innerHTML = "" ;
+        displayRecipe(search);
+        
+    }
 })
+
+
+function searchRecipe(recipes) {
+    let relevantName ;
+    let relevantIngredient ;
+    let relevantAppareil ;
+    let relevantUstensil ;
+    for (let i = 0; i < recipes.length; i++) {
+        relevantName = recipes.find(recipe => recipe.name.toLowerCase().includes(searchBarValue.toLowerCase()));
+        relevantAppareil = recipes.find(recipe => recipe.appliance.toLowerCase().includes(searchBarValue.toLowerCase()));
+
+        let ustensilsList = recipes[i].ustensils ;
+        relevantUstensil = ustensilsList.filter(ustensilList => ustensilList.toLowerCase().includes(searchBarValue.toLowerCase()));
+
+        let ingredients = recipes[i].ingredients
+        relevantIngredient = ingredients.filter(ingredientList => ingredientList.ingredient.toLowerCase().includes(searchBarValue.toLowerCase()));
+
+        //console.log(relevantUstensil)
+    }
+    if (relevantName == undefined || relevantAppareil == undefined || relevantUstensil == undefined || relevantIngredient == undefined){
+        console.log("aucune recette trouvée");
+    }
+    //console.log(relevantName)
+    
+    
+}
+
+
+const init = async () => {
+    displayRecipe();
+  };
+  init();
+  
