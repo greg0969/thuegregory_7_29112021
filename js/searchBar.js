@@ -16,7 +16,7 @@ searchBar.addEventListener("change", () => {
     }
 })
 
-
+//
 function searchRecipe(recipes) {
     let relevantName ;
     let relevantIngredient ;
