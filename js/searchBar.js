@@ -1,6 +1,9 @@
 let searchBar = document.querySelector(".form-control");
 let relevantRecipe = [];
 let filteredRecipe ;
+let ingredientContent ;
+let ingredientList = [] ;
+
 searchBar.addEventListener("keyup", () => {
 
     const recipeContainer = document.querySelector(".recipeList");
@@ -23,22 +26,28 @@ searchBar.addEventListener("keyup", () => {
 
 //
 function searchRecipe() {
-    
-    //console.log(relevantRecipe)
+
+
     for (let i = 0; i < recipes.length; i++) {
-        
-        if (recipes[i].name.toLowerCase().includes(searchBarValue) || recipes[i].appliance.toLowerCase().includes(searchBarValue)) { //ameliroer le if pour eviter les doublons
-            relevantRecipe.push(recipes[i])        
+
+        for (let j = 0; j < recipes[i].ingredients.length; j++) {
+
+            if (recipes[i].name.toLowerCase().includes(searchBarValue) || recipes[i].appliance.toLowerCase().includes(searchBarValue) 
+            || ingredientContent.toLowerCase().includes(searchBarValue) || recipes[i].ingredients[j].ingredient.toLowerCase().includes(searchBarValue)) { //ameliroer le if pour eviter les doublons
+                relevantRecipe.push(recipes[i])
+            } 
         }
     }
+    console.log(ingredientList)
+
+    
     filteredRecipe = relevantRecipe.filter(function(ele , pos){
         return relevantRecipe.indexOf(ele) == pos;
     }) 
-    console.log(filteredRecipe);
+    
     if (relevantRecipe == undefined){
         console.log("aucune recette trouvée");
     }
-    
 }
 
 

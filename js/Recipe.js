@@ -16,7 +16,7 @@ class Recipe {
     <figcaption>
         <h1>${this.name}</h1> <div class="time"><i class="far fa-clock"></i> ${this.time} min</div>    
         <ul class="ingredients">${this.ingredients.map(ingredient => {
-          let ingredientContent = ingredient.ingredient ;
+          ingredientContent = ingredient.ingredient ;
           let quantiteContent = ingredient.quantity ;
           let unitContent = ingredient.unit;
           if (quantiteContent == undefined) {
