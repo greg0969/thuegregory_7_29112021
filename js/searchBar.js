@@ -1,6 +1,8 @@
 let searchBar = document.querySelector(".form-control");
+let relevantRecipe = [];
+let filteredRecipe ;
 searchBar.addEventListener("keyup", () => {
-    
+
     const recipeContainer = document.querySelector(".recipeList");
     searchBarValue = searchBar.value.toLowerCase() ;
     
@@ -10,36 +12,38 @@ searchBar.addEventListener("keyup", () => {
     }
 
     if (searchBarValue.length >= 3) {
-        
-        recipeContainer.innerHTML = "" ;
         searchRecipe();
-        displayRecipe(relevantRecipe);
+        recipeContainer.innerHTML = "" ;
+        displayRecipe(filteredRecipe);
         
     }
 })
 
+
+
 //
 function searchRecipe() {
     
-    let relevantRecipe = [];
+    //console.log(relevantRecipe)
     for (let i = 0; i < recipes.length; i++) {
         
-        if (recipes[i].name.toLowerCase().includes(searchBarValue) 
-            || recipes[i].appliance.toLowerCase().includes(searchBarValue)) { //ameliroer le if pour eviter les doublons
-            
-            relevantRecipe.push(recipes[i])
-            
+        if (recipes[i].name.toLowerCase().includes(searchBarValue) || recipes[i].appliance.toLowerCase().includes(searchBarValue)) { //ameliroer le if pour eviter les doublons
+            relevantRecipe.push(recipes[i])        
         }
     }
-    //console.log(relevantRecipe)
-
+    filteredRecipe = relevantRecipe.filter(function(ele , pos){
+        return relevantRecipe.indexOf(ele) == pos;
+    }) 
+    console.log(filteredRecipe);
     if (relevantRecipe == undefined){
         console.log("aucune recette trouvée");
     }
+    
 }
 
+
 const init = async () => {
-    displayRecipe();
+    displayRecipe(recipes);
   };
   init();
   
