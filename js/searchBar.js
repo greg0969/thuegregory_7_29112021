@@ -12,7 +12,7 @@ searchBar.addEventListener("keyup", () => {
     if (searchBarValue.length >= 3) {
         
         recipeContainer.innerHTML = "" ;
-        
+        searchRecipe();
         displayRecipe(relevantRecipe);
         
     }
