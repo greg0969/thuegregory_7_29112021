@@ -15,34 +15,35 @@ class Recipe {
     <div class="img"></div>
     <figcaption>
         <h1>${this.name}</h1> <div class="time"><i class="far fa-clock"></i> ${this.time} min</div>    
-        <div class="ingredients"></div>
+        <ul class="ingredients">${this.ingredients.map(ingredient => {
+          let ingredientContent = ingredient.ingredient ;
+          let quantiteContent = ingredient.quantity ;
+          let unitContent = ingredient.unit;
+          if (quantiteContent == undefined) {
+            quantiteContent = "" ;
+          }
+          if (unitContent == undefined) {
+    
+            return `
+           <li>${quantiteContent} ${ingredientContent}</li>
+           `
+           
+          }
+        else {
+          return `
+           <li>${ingredientContent} : ${quantiteContent} ${unitContent}</li>
+           `
+        }
+        }).join("")}
+        </ul>
+          
+           
         <div class="desc">${this.description}</div>
     </figcaption>
     </figure>
         `;
   }
   
-  displayIngredient() {
-    return `
-    <div>
-      oui
-    </div>
-        `;
-  }
-  displayAppareils() {
-    return `
-    <div>
-      oui
-    </div>
-        `;
-  }
-  displayUstensils() {
-    return `
-    <div>
-      oui
-    </div>
-        `;
-  }
-
+  
 }
 
