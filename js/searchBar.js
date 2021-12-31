@@ -37,8 +37,7 @@ function searchRecipe() {
             for (let j = 0; j < recipes[i].ingredients.length; j++) {
 
                 if (recipes[i].name.toLowerCase().includes(searchBarValue) 
-                || recipes[i].appliance.toLowerCase().includes(searchBarValue) 
-                || recipes[i].ustensils[u].toLowerCase().includes(searchBarValue) 
+                || recipes[i].description.toLowerCase().includes(searchBarValue) 
                 || recipes[i].ingredients[j].ingredient.toLowerCase().includes(searchBarValue)) { //ameliroer le if pour eviter les doublons
                     relevantRecipe.push(recipes[i])
                     //console.log(recipes[i])
