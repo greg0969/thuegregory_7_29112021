@@ -32,23 +32,12 @@ searchBar.addEventListener("keyup", () => {
 //
 function searchRecipe() {
 
-    for (let i = 0; i < recipes.length; i++) {
-        for (let u = 0; u < recipes[i].ustensils.length; u++) {
-            for (let j = 0; j < recipes[i].ingredients.length; j++) {
-
-                if (recipes[i].name.toLowerCase().includes(searchBarValue) 
-                || recipes[i].appliance.toLowerCase().includes(searchBarValue) 
-                || recipes[i].ustensils[u].toLowerCase().includes(searchBarValue) 
-                || recipes[i].ingredients[j].ingredient.toLowerCase().includes(searchBarValue)) { //ameliroer le if pour eviter les doublons
-                    relevantRecipe.push(recipes[i])
-                    //console.log(recipes[i])
-
-                }    
-            }
-            //console.log(recipes[i].ustensils[u])
+    recipes.forEach(recipe => {
+        if(recipes.filter(recipe => recipe.name.toLowerCase().include(searchBarValue))){
+            console.log("oui")
         }
-    }
-
+        
+    });
 
     // permet de filtrer pour ne pas avoir de doublons
     filteredRecipe = relevantRecipe.filter(function(ele , pos){
