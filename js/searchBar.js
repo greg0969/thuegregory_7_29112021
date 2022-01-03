@@ -20,6 +20,7 @@ searchBar.addEventListener("keyup", () => {
     }
 
     if (searchBarValue.length > 2) {
+        console.log(searchBarValue.length)
         searchRecipe();
         recipeContainer.innerHTML = "" ;
         displayRecipe(filteredRecipe);
