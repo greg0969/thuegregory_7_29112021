@@ -19,8 +19,7 @@ searchBar.addEventListener("keyup", () => {
         console.log("Veuillez entrer au minimum 3 caractères")
     }
 
-    if (searchBarValue.length > 2) {
-        console.log(searchBarValue.length)
+    if (searchBarValue.length >= 3) {
         searchRecipe();
         recipeContainer.innerHTML = "" ;
         displayRecipe(filteredRecipe);
@@ -34,19 +33,18 @@ searchBar.addEventListener("keyup", () => {
 function searchRecipe() {
 
     for (let i = 0; i < recipes.length; i++) {
-        for (let u = 0; u < recipes[i].ustensils.length; u++) {
-            for (let j = 0; j < recipes[i].ingredients.length; j++) {
+        for (let j = 0; j < recipes[i].ingredients.length; j++) {
 
-                if (recipes[i].name.toLowerCase().includes(searchBarValue) 
-                || recipes[i].description.toLowerCase().includes(searchBarValue) 
-                || recipes[i].ingredients[j].ingredient.toLowerCase().includes(searchBarValue)) { //ameliroer le if pour eviter les doublons
-                    relevantRecipe.push(recipes[i])
-                    //console.log(recipes[i])
+            if (recipes[i].name.toLowerCase().includes(searchBarValue) 
+            || recipes[i].description.toLowerCase().includes(searchBarValue) 
+            || recipes[i].ingredients[j].ingredient.toLowerCase().includes(searchBarValue)) { //ameliroer le if pour eviter les doublons
+                relevantRecipe.push(recipes[i])
+                //console.log(recipes[i])
 
-                }    
-            }
-            //console.log(recipes[i].ustensils[u])
+            }    
         }
+        //console.log(recipes[i].ustensils[u])
+        
     }
 
 
