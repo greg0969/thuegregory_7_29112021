@@ -10,16 +10,14 @@ searchBar.addEventListener("keyup", () => {
     const recipeContainer = document.querySelector(".recipeList");
     searchBarValue = searchBar.value.toLowerCase() ;
 
-    if (searchBarValue.length == 0) {
+    if (searchBarValue.length == 0 || searchBarValue.length < 3) {
+        filteredRecipe = [] ;
         recipeContainer.innerHTML = "" ;
         displayRecipe(recipes)
-    }
-
-    if (searchBarValue.length < 3) {
         console.log("Veuillez entrer au minimum 3 caractères")
     }
 
-    if (searchBarValue.length >= 3) {
+    if (searchBarValue.length > 2) {
         searchRecipe();
         recipeContainer.innerHTML = "" ;
         displayRecipe(filteredRecipe);
@@ -39,11 +37,8 @@ function searchRecipe() {
             || recipes[i].description.toLowerCase().includes(searchBarValue) 
             || recipes[i].ingredients[j].ingredient.toLowerCase().includes(searchBarValue)) { //ameliroer le if pour eviter les doublons
                 relevantRecipe.push(recipes[i])
-                //console.log(recipes[i])
-
             }    
         }
-        //console.log(recipes[i].ustensils[u])
         
     }
 
@@ -53,7 +48,6 @@ function searchRecipe() {
         return relevantRecipe.indexOf(ele) == pos;
         
     }) 
-    console.log(filteredRecipe)
     if (relevantRecipe == undefined){
         console.log("aucune recette trouvée");
     }
