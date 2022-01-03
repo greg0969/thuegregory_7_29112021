@@ -32,19 +32,43 @@ searchBar.addEventListener("keyup", () => {
 //
 function searchRecipe() {
 
-    recipes.forEach(recipe => {
-        if(recipes.filter(recipe => recipe.name.toLowerCase().include(searchBarValue))){
-            console.log("oui")
-        }
+
+    const nameFilter = recipes.filter((recipe) =>
+        recipe.name.toLowerCase().includes(searchBarValue)
+    );
+
+   
+    const ingredientFilter = recipes.filter((recipe) =>
+        recipe.ingredients.some((ingredientArray) =>
+        ingredientArray.ingredient.toLowerCase().includes(searchBarValue)
+        )
+    );
+
+    const descFilter = recipes.filter((recipe) =>
+        recipe.description.toLowerCase().includes(searchBarValue)
+    );
+    
+
+    relevantRecipe = nameFilter.concat(
+        ingredientFilter,
+        descFilter
+    );
+    relevantRecipe = [...new Set(relevantRecipe)];
         
-    });
+
+    // recipes.forEach(recipe => {
+    //     if(recipes.filter(recipe => recipe.name.toLowerCase().include(searchBarValue))){
+    //         console.log("oui")
+    //     }
+        
+    // });
 
     // permet de filtrer pour ne pas avoir de doublons
     filteredRecipe = relevantRecipe.filter(function(ele , pos){
         return relevantRecipe.indexOf(ele) == pos;
         
     }) 
-    console.log(filteredRecipe)
+    //console.log(filteredRecipe)
     if (relevantRecipe == undefined){
         console.log("aucune recette trouvée");
     }
