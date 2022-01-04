@@ -1,6 +1,5 @@
 let searchBar = document.querySelector(".form-control");
 let relevantRecipe = [];
-let filteredRecipe ;
 let ingredientContent ;
 let ingredientList = [] ;
 let relevantIngredient = [] ;
@@ -22,7 +21,7 @@ searchBar.addEventListener("keyup", () => {
     if (searchBarValue.length > 2) {
         searchRecipe();
         recipeContainer.innerHTML = "" ;
-        displayRecipe(filteredRecipe);
+        displayRecipe(relevantRecipe);
         
     }
 })
