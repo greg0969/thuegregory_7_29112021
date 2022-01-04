@@ -56,11 +56,7 @@ function searchRecipe() {
     relevantRecipe = [...new Set(relevantRecipe)];
         console.log(relevantRecipe)
 
-    // permet de filtrer pour ne pas avoir de doublons
-    filteredRecipe = relevantRecipe.filter(function(ele , pos){
-        return relevantRecipe.indexOf(ele) == pos;
-        
-    }) 
+  
     if (relevantRecipe == undefined){
         console.log("aucune recette trouvée");
     }
