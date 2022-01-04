@@ -99,7 +99,7 @@ body {
   background-color: #3282f7;
 }
 
-#appareils {
+#appareils, .listeItemAppareils {
   background-color: #68d9a4;
 }
 
@@ -124,11 +124,11 @@ body {
 .listeItem {
   display: none;
   position: absolute;
-  border: 1px solid #aaaaaa;
-  height: 100px;
-  overflow: auto;
-  background-color: #ffffff;
+  height: 22em;
   z-index: 20;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 17em;
 }
 
 .item {
@@ -142,8 +142,12 @@ body {
   background-color: #dedeff;
 }
 
+.listeItem-container {
+  display: flex;
+  margin-left: 1em;
+}
 
-  /* CONTENEUR DES RECETTES */
+/* CONTENEUR DES RECETTES */
 
 .recipeList {
   display: flex;

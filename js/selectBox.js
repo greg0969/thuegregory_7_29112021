@@ -1,25 +1,33 @@
 
-
 let tempo = null, objTempo, dblClic = false;
 
 
 const selectBox = document.querySelectorAll(".selectBox");
 const inputGroup = document.querySelectorAll(".form-select");
-const selectGroup = document.querySelectorAll(".fa-chevron-down");
+const chevron = document.querySelectorAll(".fa-chevron-down");
+
 
 for (let i = 0; i < inputGroup.length; i++) {
+    const liste = document.querySelectorAll(".listeItem");
+    const selectedOption = document.querySelectorAll(".selectedOption");
 
-    selectGroup[i].addEventListener("click", () => {
-        const liste = document.querySelectorAll(".listeItem");
+    chevron[i].addEventListener("click", () => {
+        
         if (liste[i].style.display == "" || liste[i].style.display == "none") {
-            liste[i].style.display = "block";
+            liste[i].style.display = "flex";
+            selectedOption[i].style.width = "20em";
         }
 
         else {
             liste[i].style.display = "none";
+            selectedOption[i].style.width = "unset"
         }
-
+       
     })
+    
+    // 
+    
+   
 
     inputGroup[i].addEventListener("click", () => {
         if (tempo != null)
@@ -27,7 +35,6 @@ for (let i = 0; i < inputGroup.length; i++) {
 
         if (inputGroup[i].readOnly == true) {
             inputGroup[i].readOnly = false;
-            inputGroup[i].style.border = "inset #AAAAAA 1px";
             inputGroup[i].focus();
         }
         else
@@ -81,15 +88,79 @@ for (let i = 0; i < inputGroup.length; i++) {
     }
 }
 
-const currentTag = document.querySelectorAll(".filter-style");
-currentTag.forEach((tag) => {
-    if (tag.textContent == "Coco") {
-        tag.style.backgroundColor = "#3282f7";
+let ingredientList = [];
+let applianceList ;
+let ustensilList ; 
+
+// function displayIngredient() {
+//     const ingredientDropdown = document.querySelector(".listeItemIngredient")
+//     let ingredientContainer ;
+//     let ingredientArray ;
+
+//     for (let r = 0; r < recipes.length; r++) {
+//         for (let i = 0; i < recipes[r].ingredients.length; i++){
+//             ingredientList.push(recipes[r].ingredients[i].ingredient) ;
+
+//             ingredientList = [...new Set(ingredientList)];
+            
+//             ingredientContainer = document.createElement("p");
+//             ingredientContainer.classList.add("ingredient-container");
+//             ingredientContainer.innerHTML += ingredientList[i] ;
+//             ingredientDropdown.appendChild(ingredientContainer) ;
+//             ingredientContainerContent = document.querySelectorAll(".ingredient-container")
+            
+//             // ingredientContainerContent.appendChild("oneIngredient");
+//             console.log(ingredientList)
+//         }
+//     }
+    
+    
+//     //ingredientList = [...new Set(ingredientList)];
+//     //console.log("liste d'ingredient :", ingredientList)
+
+
+//     // ingredientList.forEach((oneIngredient) => {
+//     //     
+//     // });
+
+// }
+
+//displayIngredient() ;
+
+
+function displayAppliance() {
+    const applianceDropdown = document.querySelector(".listeItemAppareils")
+    let applianceContainer ;
+    let applianceArray = [] ;
+   
+    recipes.forEach((recipe) => {
+        applianceArray.push(recipe.appliance);
+    });
+    for (let i = 0; i < applianceArray.length ; i++) {
+        applianceArray = [...new Set(applianceArray)]; 
+        applianceContainer = document.createElement("p");
+        applianceContainer.classList.add("appliance-container","listeItem-container");
+        applianceDropdown.appendChild(applianceContainer) ;
+        applianceContainer.innerHTML = applianceArray[i] ;
     }
 
-    tag.addEventListener("click", () => {
-        tag.style.display = "none";
+}
+displayAppliance();
+
+
+
+function addTag() {
+    const currentTag = document.querySelectorAll(".filter-style");
+    currentTag.forEach((tag) => {
+        if (tag.textContent == "Coco") {
+            tag.style.backgroundColor = "#3282f7";
+        }
+
+        tag.addEventListener("click", () => {
+            tag.style.display = "none";
+        })
     })
-})
+}
+
 
 

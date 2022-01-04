@@ -1,7 +1,6 @@
 let searchBar = document.querySelector(".form-control");
 let relevantRecipe = [];
 let ingredientContent ;
-let ingredientList = [] ;
 let relevantIngredient = [] ;
 
 searchBar.addEventListener("keyup", () => {
@@ -27,7 +26,6 @@ searchBar.addEventListener("keyup", () => {
 })
 
 
-
 //
 function searchRecipe() {
 
@@ -40,9 +38,10 @@ function searchRecipe() {
     const ingredientFilter = recipes.filter((recipe) =>
         recipe.ingredients.some((ingredientArray) =>
         ingredientArray.ingredient.toLowerCase().includes(searchBarValue)
+        
         )
     );
-
+    
     const descFilter = recipes.filter((recipe) =>
         recipe.description.toLowerCase().includes(searchBarValue)
     );
@@ -53,7 +52,6 @@ function searchRecipe() {
         descFilter
     );
     relevantRecipe = [...new Set(relevantRecipe)];
-        console.log(relevantRecipe)
 
   
     if (relevantRecipe == undefined){
