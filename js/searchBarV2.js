@@ -54,21 +54,13 @@ function searchRecipe() {
         descFilter
     );
     relevantRecipe = [...new Set(relevantRecipe)];
-        
-
-    // recipes.forEach(recipe => {
-    //     if(recipes.filter(recipe => recipe.name.toLowerCase().include(searchBarValue))){
-    //         console.log("oui")
-    //     }
-        
-    // });
+        console.log(relevantRecipe)
 
     // permet de filtrer pour ne pas avoir de doublons
     filteredRecipe = relevantRecipe.filter(function(ele , pos){
         return relevantRecipe.indexOf(ele) == pos;
         
     }) 
-    //console.log(filteredRecipe)
     if (relevantRecipe == undefined){
         console.log("aucune recette trouvée");
     }
