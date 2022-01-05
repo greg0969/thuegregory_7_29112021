@@ -60,7 +60,7 @@ function searchRecipe() {
 }
 
 
-const init = async () => {
+let init = async () => {
     displayRecipe(recipes);
   };
   init();

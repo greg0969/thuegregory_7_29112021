@@ -58,8 +58,8 @@ body {
 }
 
 .filter-style {
-  width: 110px;
-  height: 2em;
+  width: 7em;
+  height: 2.2em;
   padding: 0.2em 0 0 1.2em ; 
   color: white;
 }
@@ -88,7 +88,8 @@ body {
   color: white;
   text-align: left;
   border: none;
-  border-radius: 5px;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
   padding-left: 5%;
   cursor: pointer;
 }
@@ -124,11 +125,14 @@ body {
 .listeItem {
   display: none;
   position: absolute;
-  height: 22em;
   z-index: 20;
   flex-direction: column;
+  height: 20em;
   flex-wrap: wrap;
-  width: 17em;
+  align-items: center;
+  width: 22.1em;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
 .item {
@@ -145,6 +149,8 @@ body {
 .listeItem-container {
   display: flex;
   margin-left: 1em;
+  color: white;
+
 }
 
 /* CONTENEUR DES RECETTES */
