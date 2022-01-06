@@ -88,23 +88,24 @@ body {
   color: white;
   text-align: left;
   border: none;
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   padding-left: 5%;
   cursor: pointer;
 }
 
 
 
-#ingredients {
+#ingredients, .listeItemIngredient {
   background-color: #3282f7;
+  color: white;
 }
 
 #appareils, .listeItemAppareils {
   background-color: #68d9a4;
 }
 
-#ustensils {
+#ustensils,.listeItemUstensils {
   background-color: #ed6454;
 }
 
@@ -131,8 +132,8 @@ body {
   flex-wrap: wrap;
   align-items: center;
   width: 22.1em;
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .item {

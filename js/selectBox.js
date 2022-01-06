@@ -65,7 +65,6 @@ function displaySelectBox() {
 
             if (inputGroup[i].readOnly == false) {
                 inputGroup[i].readOnly = true;
-                input.style.textAlign = "center";
             }
 
         }
@@ -87,46 +86,54 @@ function displaySelectBox() {
 }
 
 
+function displayIngredient() {
+    const ingredientDropdown = document.querySelector(".listeItemIngredient")
+    let ingredientContainer ;
+    let ingredientArray = [] ;
 
-let ingredientList = [];
-let applianceList ;
-let ustensilList ; 
 
-// function displayIngredient() {
-//     const ingredientDropdown = document.querySelector(".listeItemIngredient")
-//     let ingredientContainer ;
-//     let ingredientArray ;
-
-//     for (let r = 0; r < recipes.length; r++) {
-//         for (let i = 0; i < recipes[r].ingredients.length; i++){
-//             ingredientList.push(recipes[r].ingredients[i].ingredient) ;
-
-//             ingredientList = [...new Set(ingredientList)];
+    for (let i = 0; i < recipes.length; i++) {
+        for (let j = 0; j < recipes[i].ingredients.length; j++) {
+            ingredientArray.push(recipes[i].ingredients[j].ingredient.toLocaleLowerCase());
             
-//             ingredientContainer = document.createElement("p");
-//             ingredientContainer.classList.add("ingredient-container");
-//             ingredientContainer.innerHTML += ingredientList[i] ;
-//             ingredientDropdown.appendChild(ingredientContainer) ;
-//             ingredientContainerContent = document.querySelectorAll(".ingredient-container")
             
-//             // ingredientContainerContent.appendChild("oneIngredient");
-//             console.log(ingredientList)
-//         }
-//     }
+        }  
+        
+    }
     
+    ingredientArray = [...new Set(ingredientArray)];
+    for (let i = 0; i < ingredientArray.length; i++) {
+        ingredientContainer = document.createElement("p");
+        ingredientContainer.classList.add("ingredient-container","listeItem-container");
+        ingredientDropdown.appendChild(ingredientContainer) ;
+        ingredientContainer.innerHTML = ingredientArray[i]
+    }
+}
+displayIngredient() ;
+
+function displayUstensils() {
+    const ustensilsDropdown = document.querySelector(".listeItemUstensils");
+    let ustensilsContainer ;
+    let ustensilsArray = [] ;
+    //ustensilsArray.push(recipes.map(recipe => recipe.ustensils));
     
-//     //ingredientList = [...new Set(ingredientList)];
-//     //console.log("liste d'ingredient :", ingredientList)
+
+    for (let i = 0; i < recipes.length; i++) {
+        for (let j = 0; j < recipes[i].ustensils.length; j++) {
+            ustensilsArray.push(recipes[i].ustensils[j].toLocaleLowerCase());
+        }   
+    }
 
 
-//     // ingredientList.forEach((oneIngredient) => {
-//     //     
-//     // });
-
-// }
-
-//displayIngredient() ;
-
+    for (let i = 0; i < ustensilsArray.length ; i++) {
+        ustensilsArray = [...new Set(ustensilsArray)]; 
+        ustensilsContainer = document.createElement("p");
+        ustensilsContainer.classList.add("ustensils-container","listeItem-container");
+        ustensilsDropdown.appendChild(ustensilsContainer) ;
+        ustensilsContainer.innerHTML = ustensilsArray[i] ;
+    }
+}
+displayUstensils();
 
 function displayAppliance() {
     const applianceDropdown = document.querySelector(".listeItemAppareils");
@@ -155,6 +162,8 @@ let applianceFilter ;
         itemContainer.addEventListener("click", () => {
             itemContainerContent = itemContainer.textContent;
             applianceFilter = recipes.filter((recipe) => recipe.appliance.toLowerCase() == itemContainerContent.toLowerCase());
+            ingredientsFilter = recipes.filter((recipe) =>recipe.ingredients.some((ingredientArray) => ingredientArray.ingredient.toLowerCase() == itemContainerContent.toLowerCase()));
+            ustensilsFilter = recipes.filter((recipe) =>recipe.ustensils.some((ustensilsArray) => ustensilsArray.toLowerCase() == itemContainerContent.toLowerCase()));
             recipeContainer.innerHTML = "" ;
             displayRecipe(applianceFilter) ;
             addTag(itemContainerContent)
@@ -175,15 +184,6 @@ function addTag(currentTag) {
         recipeContainer.innerHTML = "" ;
         displayRecipe(recipes);
     });
-    // currentTag.forEach((tag) => {
-    //     if (tag.textContent == "Coco") {
-    //         tag.style.backgroundColor = "#3282f7";
-    //     }
-
-    //     tag.addEventListener("click", () => {
-    //         tag.style.display = "none";
-    //     })
-    // })
 }
 
 init = async () => {
