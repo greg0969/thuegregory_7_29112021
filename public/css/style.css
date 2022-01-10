@@ -55,22 +55,28 @@ body {
 .currentTagList {
   width: 89%;
   margin: auto;
+  display: flex;
 }
 
 .filter-style {
-  width: 7em;
-  height: 2.2em;
-  padding: 0.2em 0 0 1.2em ; 
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.6em 1.5em;
   color: white;
+  display: flex;
+  margin-right: 2em;
+  border-radius: 5px;
 }
 
 .filter-style::after {
+  
   font-family: "Font Awesome 5 Free";
   content: "\f057";
   margin-left: 15%;
   color: white;
   cursor: pointer;
-}
+  align-self: center;
+} 
 
   /* SELECT BOX */
 
@@ -83,9 +89,8 @@ body {
 }
 
 .form-select {
-  width: 85%;
+  width: 94%;
   height: 3.9em;
-  color: white;
   text-align: left;
   border: none;
   border-top-left-radius: 5px;
@@ -94,6 +99,10 @@ body {
   cursor: pointer;
 }
 
+.form-select::placeholder {
+  color: white;
+
+}
 
 
 #ingredients, .listeItemIngredient {
@@ -113,7 +122,8 @@ body {
     margin-left: -15%;
     color: white;
     cursor: pointer;
-    height: fit-content; 
+    height: fit-content;
+    z-index: 20; 
 }
 
 
@@ -128,12 +138,14 @@ body {
   position: absolute;
   z-index: 20;
   flex-direction: column;
-  height: 20em;
+  height: 22em;
   flex-wrap: wrap;
   align-items: center;
-  width: 22.1em;
+  width: 31.5em;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  overflow: hidden;
+  padding-top: 1em;
 }
 
 .item {
@@ -151,8 +163,12 @@ body {
   display: flex;
   margin-left: 1em;
   color: white;
-
+  line-height: 18px;
+  margin-right: 2em;
+  align-self: flex-start;
+  cursor: pointer;
 }
+
 
 /* CONTENEUR DES RECETTES */
 
