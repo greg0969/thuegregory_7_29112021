@@ -110,12 +110,24 @@ body {
   color: white;
 }
 
+.listeItemIngredient {
+  height: 84em;
+}
+
 #appareils, .listeItemAppareils {
   background-color: #68d9a4;
 }
 
+.listeItemAppareils {
+  height: 9em;
+}
+
 #ustensils,.listeItemUstensils {
   background-color: #ed6454;
+}
+
+.listeItemUstensils {
+  height: 19em;
 }
 
 .fa-chevron-down,.fa-chevron-up {
@@ -138,10 +150,9 @@ body {
   position: absolute;
   z-index: 20;
   flex-direction: column;
-  height: 22em;
   flex-wrap: wrap;
   align-items: center;
-  width: 31.5em;
+  width: 40.5em;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   overflow: hidden;

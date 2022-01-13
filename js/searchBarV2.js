@@ -29,12 +29,10 @@ searchBar.addEventListener("keyup", () => {
 //
 function searchRecipe() {
 
-
     const nameFilter = recipes.filter((recipe) =>
         recipe.name.toLowerCase().includes(searchBarValue)
     );
-
-   
+ 
     const ingredientFilter = recipes.filter((recipe) =>
         recipe.ingredients.some((ingredientArray) =>
         ingredientArray.ingredient.toLowerCase().includes(searchBarValue)
@@ -46,14 +44,12 @@ function searchRecipe() {
         recipe.description.toLowerCase().includes(searchBarValue)
     );
     
-
     relevantRecipe = nameFilter.concat(
         ingredientFilter,
         descFilter
     );
     relevantRecipe = [...new Set(relevantRecipe)];
 
-  
     if (relevantRecipe == undefined){
         console.log("aucune recette trouvée");
     }
