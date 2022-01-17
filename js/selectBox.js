@@ -94,7 +94,7 @@ function displayUstensils() {
 
     for (let i = 0; i < recipes.length; i++) {
         for (let j = 0; j < recipes[i].ustensils.length; j++) {
-            ustensilsArray.push(recipes[i].ustensils[j].toLocaleLowerCase());
+            ustensilsArray.push(recipes[i].ustensils[j].toLowerCase());
         }
     }
 
@@ -113,7 +113,7 @@ function displayAppliance() {
     let applianceContainer;
 
     recipes.forEach((recipe) => {
-        applianceArray.push(recipe.appliance);
+        applianceArray.push(recipe.appliance.toLowerCase());
     });
     for (let i = 0; i < applianceArray.length; i++) {
         applianceArray = [...new Set(applianceArray)];

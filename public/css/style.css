@@ -116,6 +116,7 @@ body {
 
 #appareils, .listeItemAppareils {
   background-color: #68d9a4;
+  color: white;
 }
 
 .listeItemAppareils {
@@ -124,6 +125,7 @@ body {
 
 #ustensils,.listeItemUstensils {
   background-color: #ed6454;
+  color: white;
 }
 
 .listeItemUstensils {
