@@ -176,62 +176,51 @@ function inputSearch() {
 
     let listItemContainer ;
 
-    for (let i = 0; i < inputGroup.length; i++) {
+    inputGroup.forEach((input) => {
         let inputValue ;
 
-        inputGroup[i].addEventListener("keyup", () => {
-
-            inputValue = inputGroup[i].value ;
-            console.log(inputValue);
+        input.addEventListener("keyup", () => {
+            inputValue = input.value ;
 
             /* On vérifie dans quelle selecbox on est */
-
-            if (inputGroup[i].getAttribute("id") == "ingredients") {
+            
+            if (input.getAttribute("id") == "ingredients") {
                 listItemContainer = document.querySelectorAll(".ingredient-container");
                 sortItem(listItemContainer);
-                
+                    
             }
-            if (inputGroup[i].getAttribute("id") == "appareils") {
+
+            if (input.getAttribute("id") == "appareils") {
                 listItemContainer = document.querySelectorAll(".appliance-container");
                 sortItem(listItemContainer);
             }
-            if (inputGroup[i].getAttribute("id") == "ustensils") {
+
+            if (input.getAttribute("id") == "ustensils") {
                 listItemContainer = document.querySelectorAll(".ustensils-container");
                 sortItem(listItemContainer);
             }
-            
 
-            function sortItem(listItemContainer) {
-                let itemArray = [] ;
-                let itemFilter = [];
-                let itemContainerArray = [] ;                
-
-                listItemContainer.forEach((item) => {
-                    itemFilter = [] ;
-                    itemContainerArray.push(item)
-                    itemArray.push(item.textContent);
-                    itemFilter = itemArray.filter(value => value.match(inputValue)); // itemFilter contient la ou les valeurs qui doivent rester affichées 
-                    for (let j = 0; j < itemFilter.length; j++) {
-
-                        if (!item.textContent.match(itemFilter[j]) ) { // On vérifie si la valeur de chaque balise ne match avec la ou les valeurs de itemFilter
-                            item.style.display = "none" ; // alors on display none les balises qui ne correspondent pas
-                            
-                        }
-                        
-                        else {
-                            item.style.display = "flex" ;
-                            itemFilter = [] ;
-                        }
-                    }
-                    
-                });
-                console.log(itemFilter)
-
-
-            }
         });
-    }
-    
+
+
+        function sortItem(listItemContainer) {
+            let itemArray = [] ;
+                     
+            for (let i = 0; i < listItemContainer.length; i++) {
+                itemArray.push(listItemContainer[i].textContent);
+                //const regex = new RegExp(itemArray[i]);
+
+                if (!itemArray[i].includes(inputValue)) {
+                    listItemContainer[i].style.display = "none";
+                }
+
+                if (itemArray[i].includes(inputValue) || inputValue.length == 0) {
+                    listItemContainer[i].style.display = "flex" ;
+                }
+                
+            }           
+        }
+    });
 }
 
 
