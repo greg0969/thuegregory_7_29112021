@@ -162,7 +162,7 @@ const recipes = [
                 "quantity": 2
            },
            {
-               "ingredient": "Crème fraiche",
+               "ingredient": "crème fraîche",
                "quantity": 2,
                "unit": "cuillères à soupe"
            },
@@ -178,13 +178,13 @@ const recipes = [
            }
         ],
         "time": 45,
-        "description": "Etaler la pâte feuilleté aux dimensions du moule, étaler la moutarde sur la pâte feuilleté, ajouter le thon. Découper les tomates en rondelles et les poser sur le poisson, ajouter un peu de crème fraiche sur toute la tarte et recouvrez de gruyère râpé. Cuire au four 30 minutes",
+        "description": "Etaler la pâte feuilleté aux dimensions du moule, étaler la moutarde sur la pâte feuilleté, ajouter le thon. Découper les tomates en rondelles et les poser sur le poisson, ajouter un peu de crème fraîche sur toute la tarte et recouvrez de gruyère râpé. Cuire au four 30 minutes",
         "appliance":"Four",
         "ustensils": ["moule à tarte", "râpe à fromage", "couteau"]
     },
     {
         "id": 6,
-        "name": "Tarte aux pommes",
+        "name": "Tarte aux pomme",
         "servings": 6,
         "ingredients":[
             {
@@ -200,7 +200,7 @@ const recipes = [
                 "quantity": "2"
             },
             {
-                "ingredient":"Crème fraiche",
+                "ingredient":"crème fraîche",
                 "quantity":25,
                 "unit": "cl"
             },
@@ -217,7 +217,7 @@ const recipes = [
             }
         ],
         "time": 50,
-        "description": "Commencez par mélanger les oeufs le sucre et le sucre vanillé dans un saladier, découper les pommes en tranches, ajouter la crème fraiche aux oeufs. Une fois que tout est pret, étalez la tarte dans le moule. N'oubliez pas de piquer le fond avec une fourchette avant depositionner les pommes sur la tarte. Finallement verser la préparation à base d'oeufs et de crême fraiche. Laisser cuire au four pendant 30 minutes",
+        "description": "Commencez par mélanger les oeufs le sucre et le sucre vanillé dans un saladier, découper les pomme en tranches, ajouter la crème fraîche aux oeufs. Une fois que tout est pret, étalez la tarte dans le moule. N'oubliez pas de piquer le fond avec une fourchette avant depositionner les pomme sur la tarte. Finallement verser la préparation à base d'oeufs et de crème fraîche. Laisser cuire au four pendant 30 minutes",
         "appliance": "Four",
         "ustensils": ["moule à tarte", "saladier", "fourchette"]
     },{
@@ -322,7 +322,7 @@ const recipes = [
             }
         ],
         "time": 15,
-        "description":"Peler le concombre le couper 2, retirer les pépins. Couper les olives en morceaux, ainsi que le fromage de chèvre. Ajouter le basilic ainsi que le vinaigre balsamic et l'huile d'olives à votre gout.",
+        "description":"Peler le concombre le couper 2, retirer les pépins. Couper les olives en morceaux, ainsi que le fromage de chèvre. Ajouter le basilic ainsi que le vinaigre balsamic et l'huile d'olive à votre gout.",
         "appliance":"Saladier",
         "ustensils":["cuillère en bois", "couteau"]
     },
@@ -357,7 +357,7 @@ const recipes = [
             }
         ],
         "time": 60,
-        "description": "Commencer par cuire les pommes de terre dans l'eau bouillante. Puis epluchez les et coupez les en rondelles. Emincer les oignons puis les faire dorer dans du beurre. Ajouter le jambon fumé coupé en en morceaux ainsi que les pommes de terres. Salez, poivrez à votre gout ( et celui de vos convives ) Laissez cuisiner durant environ 10 minutes puis ajouter le vin blanc. Après 5 minutes, mettre le tout dans un plat à gratin. Coupez le rebelochon, soit en tranches, soit le couper en 2 dans le sens de l'épaisseur et recouvrir les pommes de terre. Cuire au four (environ 220°) durant 25 minutes. C'est prêt !",
+        "description": "Commencer par cuire les pomme de terre dans l'eau bouillante. Puis epluchez les et coupez les en rondelles. Emincer les oignons puis les faire dorer dans du beurre. Ajouter le jambon fumé coupé en en morceaux ainsi que les pommes de terres. Salez, poivrez à votre gout ( et celui de vos convives ) Laissez cuisiner durant environ 10 minutes puis ajouter le vin blanc. Après 5 minutes, mettre le tout dans un plat à gratin. Coupez le rebelochon, soit en tranches, soit le couper en 2 dans le sens de l'épaisseur et recouvrir les pommes de terre. Cuire au four (environ 220°) durant 25 minutes. C'est prêt !",
         "appliance":"Four",
         "ustensils": ["plat à gratin", "couteau","Économe"]
     },{
@@ -381,7 +381,7 @@ const recipes = [
                 "unit": "tranches"
             }, 
             {
-                "ingredient": "Pommes",
+                "ingredient": "Pomme",
                 "quantity": 1
             },
             {
@@ -409,7 +409,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Pommes",
+                "ingredient": "Pomme",
                 "quantity": 8
             },
             {
@@ -569,7 +569,7 @@ const recipes = [
                 "unit":"tiges"
             },
             {
-                "ingredient": "huile d'olives",
+                "ingredient": "huile d'olive",
                 "quantity": 2,
                 "unit": "cuillère à soupe"
             }
@@ -685,7 +685,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Crème fraiche",
+                "ingredient": "crème fraîche",
                 "quantity": 200,
                 "unit": "grammes"
             },
@@ -701,7 +701,7 @@ const recipes = [
             }
         ],
         "time": 30,
-        "description":"Faire cuire les pates comme indiqué sur le paquet. Dorer les lardons dans une sauteuse avec l'huile d'olive. Ajouter la crême fraiche et baisser le feu au minimum. Quand les Tagliatelles sont prêtes les mettre dans la sauteuse et bien mélanger le tout en ajoutant le jaune d'oeuf. Servir et ajouter le parmesan râpé.",
+        "description":"Faire cuire les pates comme indiqué sur le paquet. Dorer les lardons dans une sauteuse avec l'huile d'olive. Ajouter la crème fraîche et baisser le feu au minimum. Quand les Tagliatelles sont prêtes les mettre dans la sauteuse et bien mélanger le tout en ajoutant le jaune d'oeuf. Servir et ajouter le parmesan râpé.",
         "appliance": "Sauteuse",
         "ustensils":["râpe à fromage", "cuillère en bois"]
     },
@@ -735,13 +735,13 @@ const recipes = [
                 "unit": "cl"
             },
             {
-                "ingredient": "Crème Fraiche",
+                "ingredient": "crème fraîche",
                 "quantity" : 1,
                 "unit": "cuillères à soupe"
             }
         ],
         "time": 30,
-        "description":"Cuisiner la viande hachée dans une poelle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oigons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomates à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraiche à la viande hachée. Serivir.",
+        "description":"Cuisiner la viande hachée dans une poelle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oigons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomate à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraîche à la viande hachée. Serivir.",
         "appliance": "Casserole",
         "ustensils":["Cuillère en bois", "louche", "couteau"]
     },
@@ -908,7 +908,7 @@ const recipes = [
                 "quantity": 1
             },
             {
-                "ingredient": "Huile d'olives"
+                "ingredient": "huile d'olive"
             },
             {
                 "ingredient": "Oignon",
@@ -955,7 +955,7 @@ const recipes = [
             }
         ],
         "time": 15,
-        "description":"Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraîche",
+        "description":"Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crème fraîche",
         "appliance": "Casserole",
         "ustensils":["couteau","cuillère en bois"]
     },
@@ -984,7 +984,7 @@ const recipes = [
                 "unit":"grammes"
             },
             {
-                "ingredient": "Crême fraîche",
+                "ingredient": "crème fraîche",
                 "quantity": 10,
                 "unit": "cl"
             }
@@ -1069,7 +1069,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Petits poids",
+                "ingredient": "petits pois",
                 "quantity": 100,
                 "unit":"grammes"
             },
@@ -1080,7 +1080,7 @@ const recipes = [
             }
         ],
         "time": 60,
-        "description":"Découper en cubes les carottes et pommes de terre. Faire revenir dans du beurre. Ajouter les lardons, une fois les lardons dorés, ajouter un grand verre d'eau. Ajouter les petit poids et les haricots verts ( tous deux pré cuits ). Ajouter Sel, poivre, thyms et laurier",
+        "description":"Découper en cubes les carottes et pomme de terre. Faire revenir dans du beurre. Ajouter les lardons, une fois les lardons dorés, ajouter un grand verre d'eau. Ajouter les petit poids et les haricots verts ( tous deux pré cuits ). Ajouter Sel, poivre, thyms et laurier",
         "appliance": "Poële",
         "ustensils":["Couteau", "économe"]
     },
@@ -1281,7 +1281,7 @@ const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Huile d'olives",
+                "ingredient": "huile d'olive",
                 "quantity": 25,
                 "unit": "cl"
             },
@@ -1290,7 +1290,7 @@ const recipes = [
                 "quantity": 1
             },
             {
-                "ingredient": "Coulis de tomates",
+                "ingredient": "coulis de tomate",
                 "quantity": 20,
                 "unit": "cl"
             },
@@ -1302,7 +1302,7 @@ const recipes = [
             
         ],
         "time": 60,
-        "description":"Couper les courgettes dans le sens de la longueur. Vider les courgette dans un saladier. Réserver.Faire revenir la chair des courgettes dans 25cl d'huile d'olive. Ajouter l'oignon puis la viande hachée. Mettre la farce dans les courgettes. Ajouter le coulis de tomates. Mettre au four pendant 30 minutes. Avant la fin de la cuisson ajouter le fromage rapé",
+        "description":"Couper les courgettes dans le sens de la longueur. Vider les courgette dans un saladier. Réserver.Faire revenir la chair des courgettes dans 25cl d'huile d'olive. Ajouter l'oignon puis la viande hachée. Mettre la farce dans les courgettes. Ajouter le coulis de tomate. Mettre au four pendant 30 minutes. Avant la fin de la cuisson ajouter le fromage rapé",
         "appliance": "Four",
         "ustensils":["couteau", "cuillère en bois", "Poelle à frire"]
     },
@@ -1338,7 +1338,7 @@ const recipes = [
     },
     {
         "id": 39,
-        "name": "Crumble aux pommes",
+        "name": "Crumble aux pomme",
         "servings": 40,
         "ingredients": [
             {
@@ -1362,7 +1362,7 @@ const recipes = [
             }
         ],
         "time": 40,
-        "description":"Découper les pommes en dé. Mélanger dans un saladier la farine, le sucre et le beurre. Bien mélanger. Beurrer le moule et ajouter les pommes. Par dessus placez la pate que vous avez obtenu. Cuire 20 minutes au four",
+        "description":"Découper les pomme en dé. Mélanger dans un saladier la farine, le sucre et le beurre. Bien mélanger. Beurrer le moule et ajouter les pomme. Par dessus placez la pate que vous avez obtenu. Cuire 20 minutes au four",
         "appliance": "Four",
         "ustensils":["saladier", "couteau","fouet"]
     },
@@ -1616,7 +1616,7 @@ const recipes = [
             }
         ],
         "time": 5,
-        "description":"Mélanger le jus de citron avec le sucre et la mascarpone. Ajouter la crème fraiche. Mélanger le tout et mettre au congélateur pendant 1 heure. Servir",
+        "description":"Mélanger le jus de citron avec le sucre et la mascarpone. Ajouter la crème fraîche. Mélanger le tout et mettre au congélateur pendant 1 heure. Servir",
         "appliance": "Saladier",
         "ustensils":["fouet", "verres", "cuillère en bois"]
     },
@@ -1665,7 +1665,7 @@ const recipes = [
                 "quantity": 2
             },
             {
-                "ingredient": "Kiwis",
+                "ingredient": "Kiwi",
                 "quantity": 3
             },
             {

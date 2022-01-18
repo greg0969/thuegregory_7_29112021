@@ -2,6 +2,7 @@ let searchBar = document.querySelector(".form-control");
 let relevantRecipe = [];
 let ingredientContent ;
 let relevantIngredient = [] ;
+const listItemContainer = document.querySelector(".listeItem"); 
 
 searchBar.addEventListener("keyup", () => {
 
@@ -10,16 +11,26 @@ searchBar.addEventListener("keyup", () => {
 
     if (searchBarValue.length == 0) {
         recipeContainer.innerHTML = "" ;
-        displayRecipe(recipes)
+        displayRecipe(recipes);
+        displayIngredient(recipes);
+        displayUstensils(recipes);
+        displayAppliance(recipes);
     }
 
     if (searchBarValue.length < 3) {
-        console.log("Veuillez entrer au minimum 3 caractères")
+        console.log("Veuillez entrer au minimum 3 caractères");
+        displayIngredient(recipes);
+        displayUstensils(recipes);
+        displayAppliance(recipes);
     }
 
     if (searchBarValue.length > 2) {
         searchRecipe();
         recipeContainer.innerHTML = "" ;
+        listItemContainer.innerHTML = "" ;
+        displayIngredient(relevantRecipe);
+        displayUstensils(relevantRecipe);
+        displayAppliance(relevantRecipe);
         displayRecipe(relevantRecipe);
         
     }
@@ -58,6 +69,7 @@ function searchRecipe() {
 
 let init = async () => {
     displayRecipe(recipes);
+    
   };
   init();
   
