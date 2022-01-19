@@ -56,6 +56,7 @@ body {
   width: 89%;
   margin: auto;
   display: flex;
+  padding: unset;
 }
 
 .filter-style {
@@ -66,6 +67,7 @@ body {
   display: flex;
   margin-right: 2em;
   border-radius: 5px;
+  width: auto;
 }
 
 .filter-style::after {
@@ -159,6 +161,7 @@ body {
   border-bottom-right-radius: 5px;
   overflow: hidden;
   padding-top: 1em;
+  padding-left: unset;
 }
 
 .item {
@@ -174,12 +177,13 @@ body {
 
 .listeItem-container {
   display: flex;
-  margin-left: 1em;
+  margin-left: 1.5em;
   color: white;
-  line-height: 18px;
+  line-height: 2em;
   margin-right: 2em;
   align-self: flex-start;
   cursor: pointer;
+  width: auto;
 }
 
 
