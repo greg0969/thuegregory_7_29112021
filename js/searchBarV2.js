@@ -25,20 +25,24 @@ searchBar.addEventListener("keyup", () => {
     }
 
     if (searchBarValue.length > 2) {
-        searchRecipe();
+        searchRecipe(searchBarValue);
         recipeContainer.innerHTML = "" ;
         listItemContainer.innerHTML = "" ;
         displayIngredient(relevantRecipe);
         displayUstensils(relevantRecipe);
         displayAppliance(relevantRecipe);
         displayRecipe(relevantRecipe);
+        sortRecipeByTag();
         
     }
 })
 
 
 //
-function searchRecipe() {
+function searchRecipe(searchBarValue) {
+
+    let searchBar = document.querySelector(".form-control");
+    searchBarValue = searchBar.value.toLowerCase() ;
 
     const nameFilter = recipes.filter((recipe) =>
         recipe.name.toLowerCase().includes(searchBarValue)
