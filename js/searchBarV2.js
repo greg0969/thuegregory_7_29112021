@@ -51,7 +51,8 @@ searchBar.addEventListener("keyup", () => {
             displayRecipe(tagRemaining) ;
             sortRecipeByTag();
         }
-        if (relevantRecipe.length == 0){    
+        if (relevantRecipe.length == 0) {
+            recipeContainer.innerHTML = "" ;    
             const noRecipeMessage = document.createElement("div");
             noRecipeMessage.id = "message" ;
             recipeContainer.appendChild(noRecipeMessage) ;

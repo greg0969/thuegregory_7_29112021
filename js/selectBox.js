@@ -141,6 +141,8 @@ function sortRecipeByTag() {
             let ingredientFilter ;
             let applianceFilter ;
             let ustensilsFilter ;
+            let filteredRecipe ;
+
             itemContainerContent = itemContainer.textContent;
 
             ingredientFilter = recipes.filter((recipe) => recipe.ingredients.some((ingredientArray) => 
@@ -160,6 +162,16 @@ function sortRecipeByTag() {
                 displayIngredient(ingredientFilter);
                 displayUstensils(ingredientFilter);
                 displayAppliance(ingredientFilter);
+                if (searchBar.value.length > 0) {
+                    recipeContainer.innerHTML = "" ;
+                    filteredRecipe = relevantRecipe.filter((recipe) => recipe.ingredients.some((ingredientArray) => 
+                    ingredientArray.ingredient.toLowerCase() == itemContainerContent.toLowerCase()));
+                    displayRecipe(filteredRecipe);
+                    displayIngredient(filteredRecipe);
+                    displayAppliance(filteredRecipe);
+                    displayUstensils(filteredRecipe);
+                    
+                }
             }
 
             if (itemContainer.getAttribute("id") === "appliance-container") {
@@ -167,6 +179,15 @@ function sortRecipeByTag() {
                 displayAppliance(applianceFilter);
                 displayIngredient(applianceFilter);
                 displayUstensils(applianceFilter);
+                if (searchBar.value.length > 0) {
+                    recipeContainer.innerHTML = "" ;
+                    filteredRecipe = relevantRecipe.filter((recipe) => recipe.appliance.toLowerCase() == itemContainerContent.toLowerCase());
+                    displayRecipe(filteredRecipe);
+                    displayIngredient(filteredRecipe);
+                    displayAppliance(filteredRecipe);
+                    displayUstensils(filteredRecipe);
+                    
+                }
             }
 
             if (itemContainer.getAttribute("id") === "ustensils-container") {
@@ -174,7 +195,19 @@ function sortRecipeByTag() {
                 displayUstensils(ustensilsFilter);
                 displayAppliance(ustensilsFilter);
                 displayIngredient(ustensilsFilter);
+                if (searchBar.value.length > 0) {
+                    recipeContainer.innerHTML = "" ;
+                    filteredRecipe = relevantRecipe.filter((recipe) => recipe.ustensils.some((ustensilsArray) => 
+                    ustensilsArray.toLowerCase() == itemContainerContent.toLowerCase()));
+                    displayRecipe(filteredRecipe);
+                    displayIngredient(filteredRecipe);
+                    displayAppliance(filteredRecipe);
+                    displayUstensils(filteredRecipe);
+                    
+                }
             }
+
+            
             sortRecipeByTag();
 
         });
@@ -243,6 +276,7 @@ function addTag(currentTag) {
     
     const tagListContainer = document.querySelector(".currentTagList");
     const tagContainer = document.createElement("li");
+    const recipeContainer = document.querySelector(".recipeList");
 
     tagContainer.classList.add("filter-style");
     tagListContainer.appendChild(tagContainer);
@@ -300,6 +334,14 @@ function removeTag() {
                 displayIngredient(tagRemaining);
                 displayAppliance(tagRemaining);
                 displayUstensils(tagRemaining);
+            }
+
+            if (relevantRecipe.length == 0) {
+                recipeContainer.innerHTML = "" ;    
+                const noRecipeMessage = document.createElement("div");
+                noRecipeMessage.id = "message" ;
+                recipeContainer.appendChild(noRecipeMessage) ;
+                noRecipeMessage.innerHTML = "Aucune recette ne correspond à votre critère… vous pouvez chercher 'tarte aux pommes', 'poisson', 'etc' " ; 
             }
 
             sortRecipeByTag()
