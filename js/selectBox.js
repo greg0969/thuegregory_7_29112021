@@ -304,7 +304,8 @@ function removeTag() {
             let tagRemaining ;  
             
             tagList.forEach((tagContent) => {
-                tagRemaining = recipes.filter((recipe) => recipe.ingredients.some((ingredientArray) => 
+
+                tagRemaining = relevantRecipe.filter((recipe) => recipe.ingredients.some((ingredientArray) => 
                 ingredientArray.ingredient.toLowerCase() == tagContent.textContent.toLowerCase()));
             });
     
@@ -325,9 +326,7 @@ function removeTag() {
                 displayIngredient(relevantRecipe);
                 displayAppliance(relevantRecipe);
                 displayUstensils(relevantRecipe);
-                
             }
-            
             if (tagListContainer.childElementCount == 1 && searchBar.value.length == 0) {
                 recipeContainer.innerHTML = "" ;
                 displayRecipe(tagRemaining);
@@ -335,15 +334,10 @@ function removeTag() {
                 displayAppliance(tagRemaining);
                 displayUstensils(tagRemaining);
             }
-
-            if (relevantRecipe.length == 0) {
-                recipeContainer.innerHTML = "" ;    
-                const noRecipeMessage = document.createElement("div");
-                noRecipeMessage.id = "message" ;
-                recipeContainer.appendChild(noRecipeMessage) ;
-                noRecipeMessage.innerHTML = "Aucune recette ne correspond à votre critère… vous pouvez chercher 'tarte aux pommes', 'poisson', 'etc' " ; 
+            if (searchBar.value.length > 0 && tagListContainer.childElementCount == 1) {
+                recipeContainer.innerHTML = "" ;
+                displayRecipe(tagRemaining) 
             }
-
             sortRecipeByTag()
         });
     });

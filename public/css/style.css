@@ -50,6 +50,16 @@ body {
   float: left;
   border: none;
 }
+
+  /* ERROR MESSAGE */
+
+#searchBarMessage {
+  display: none;
+  width: 88%;
+  margin: auto;
+  font-size: 14px;
+}
+
   /* CURRENT TAG */
 
 .currentTagList {

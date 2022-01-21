@@ -3,6 +3,7 @@ let relevantRecipe = [];
 let ingredientContent ;
 let relevantIngredient = [] ;
 const listItemContainer = document.querySelector(".listeItem"); 
+const searchBarError = document.querySelector("#searchBarMessage");
 
 searchBar.addEventListener("keyup", () => {
 
@@ -30,7 +31,7 @@ searchBar.addEventListener("keyup", () => {
     }
 
     if (searchBarValue.length < 3) {
-        console.log("Veuillez entrer au minimum 3 caractères");
+        //searchBarError.style.display = "block" ;
         displayIngredient(recipes);
         displayUstensils(recipes);
         displayAppliance(recipes);
@@ -38,6 +39,7 @@ searchBar.addEventListener("keyup", () => {
     }
 
     if (searchBarValue.length > 2) {
+        //searchBarError.style.display = "none" ;
         searchRecipe(searchBarValue);
         recipeContainer.innerHTML = "" ;
         listItemContainer.innerHTML = "" ;
@@ -46,10 +48,12 @@ searchBar.addEventListener("keyup", () => {
         displayAppliance(relevantRecipe);
         displayRecipe(relevantRecipe);
         sortRecipeByTag();
-        if (tagListContainer.childElementCount > 0 ) {
+        if (tagListContainer.childElementCount == 1 ) {
             recipeContainer.innerHTML = "" ;
             displayRecipe(tagRemaining) ;
             sortRecipeByTag();
+            console.log("1 seul tags et recherche principale")
+
         }
         if (relevantRecipe.length == 0) {
             recipeContainer.innerHTML = "" ;    
